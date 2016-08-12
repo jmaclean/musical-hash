@@ -45,7 +45,7 @@ def hash_to_tones(hash, tone_dict, length_dict):
         tones += [(freq, length, freq_string)]
     return tones
 
-def gen_hash(length):
+def gen_rand_hash(length):
     return ''.join(['%x' % randint(0, 15) for i in range(length)])
 
 if __name__ == '__main__':
@@ -57,7 +57,7 @@ if __name__ == '__main__':
         m.update(args['<string>'])
         hash = m.hexdigest()
     else:
-        hash = gen_hash(32)
+        hash = gen_rand_hash(32)
     print hash
     tones = hash_to_tones(hash, tone_dict, length_dict)
     tone_chain = []
