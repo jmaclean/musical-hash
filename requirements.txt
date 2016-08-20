@@ -1,3 +1,4 @@
 audiogen==0.1.2
 docopt==0.6.1
-numpy==1.11.1
+PyAudio==0.2.9
+wavebender==0.3
